@@ -1,0 +1,10 @@
+.Head_container     {
+    text-align: center;
+}
+
+.Header     {
+    background-color: orange;
+    height: 20%;
+    width: 85%;
+    display: inline-block;
+}
