@@ -1,0 +1,11 @@
+.Carousel   {
+    background-color: blue;
+    height: 300px;
+    width: 100%; 
+}
+
+.movies {
+    background-color: yellow;
+    height: 95%;
+    width: 20%;
+}

@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './header'
 import './styles/App.css';
-{/*import Movies from './movies.js'*/}
+import MoviesCarousel from './moviescarousel.js'
 
-function App() {
+class App extends Component {
+
+  render()  {
   return (
-    <div className="App">
-      <Header />
-      {/*<Movies />*/}
+    <div className="App-container">
+      <div className="App">
+        <Header />
+        <MoviesCarousel />
+      </div>
     </div>
-  );
+  )};
 }
 
 export default App;

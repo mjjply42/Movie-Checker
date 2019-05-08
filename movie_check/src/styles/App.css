@@ -1,5 +1,10 @@
+.App-container    {
+  text-align: center;
+}
+
 .App  {
-  background-color: blue;
-  width: 80%;
+  background-color: rgb(29, 5, 116);
+  width: 100vw;
   height: 100vh;
+  display: inline-block;
 }

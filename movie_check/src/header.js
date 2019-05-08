@@ -10,7 +10,12 @@ class Header extends Component {
         return (
         <div className="Head_container">
             <div className="Header">
-                <h1> Hello Here is the header </h1>
+                <nav className="navbar navbar-dark bg-dark">
+                    <form className="form-inline">
+                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button className="search btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </nav>
             </div>
         </div>
     )
