@@ -1,11 +1,44 @@
-.Carousel   {
+/* Upcoming Carousel Component Styling*/
+.UpCarousel   {
     background-color: blue;
+    margin-top: 10px;
     height: 300px;
     width: 100%; 
 }
 
-.movies {
+.upcoming-movies    {
+    list-style: none;
+}
+
+.Upmovies {
     background-color: yellow;
     height: 95%;
     width: 20%;
+    margin: 0px 0px 10px 10px;
+    display: inline-block;
+}
+
+/* Playing Carousel Component Styling*/
+.PlayingCarousel   {
+    background-color: orange;
+    margin-top: 10px;
+    height: 300px;
+    width: 100%; 
+}
+
+.Playing-movies    {
+    list-style: none;
+}
+
+.Playmovies {
+    background-color: pink;
+    height: 95%;
+    width: 20%;
+    margin: 0px 0px 10px 10px;
+    display: inline-block;
+}
+
+.color-div      {
+    height: 200px;
+    width: 150px;
 }

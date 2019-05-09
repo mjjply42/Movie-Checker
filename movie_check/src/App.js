@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './header'
 import './styles/App.css';
-import MoviesCarousel from './moviescarousel.js'
+import NowPlaying from './NowPlaying'
+import UpcomingCarousel from './UpcomingCarousel'
 
 class App extends Component {
 
@@ -10,7 +11,8 @@ class App extends Component {
     <div className="App-container">
       <div className="App">
         <Header />
-        <MoviesCarousel />
+        <NowPlaying />
+        <UpcomingCarousel />
       </div>
     </div>
   )};
