@@ -1,4 +1,5 @@
 import React, { Component} from 'react'
+import Slider from "react-slick";
 import './styles/moviescarousel.css'
 
 class UpcomingCarousel extends Component   {
@@ -7,13 +8,8 @@ class UpcomingCarousel extends Component   {
         this.state = {
             arrLength: 0,
             moviesArr: [],
-            movieTitles: [],
-            test_arr: ["red", "blue", "green"],
-            test_color: {
-                backgroundColor: "white"
-            }
+            movieTitles: []
         }
-        this.changeColor = this.changeColor.bind(this)
     }
     componentDidMount()
     {
@@ -26,32 +22,27 @@ class UpcomingCarousel extends Component   {
             movieTitles: response.results.map((item) => item.original_title)
         })
         console.log(this.state)
-        })
-    }
-    changeColor = () => {
-        let counter = 0;
-        
-        const changey = () => {
-           this.setState({test_color: this.state.test_arr[counter]})
-           counter += 1 
-        }
-        changey()
+        })    
     }
     
     render()    {
         console.log(this.state)
-
-        const movies_list = this.state.movieTitles.map((title) => <li key={title} className="Upmovies">{title}</li>)
+        var settings = {
+            slidesToShow: 7,
+            slidesToScroll: 2,
+            speed: 800,
+            autoplay: false,
+            autoplaySpeed: 3000,
+            arrows: true,
+          }
+        const movies_list = this.state.movieTitles.map((title) => <div key={title} className="Upmovies"><h3>{title}</h3></div>)
         return (
             <div className="Carousel-container">
                 <div className="UpCarousel">
                     {/*<button onClick={this.loopMovies}/>*/}
-                    <ul className="upcoming-movies">
+                    <Slider {...settings}>
                         {movies_list}
-                    </ul>
-                    <div className="color-div" styles={this.state.test_color}>
-                    <button onClick={this.changeColor}></button>
-                    </div>
+                    </Slider>
                 </div>
             </div>
         )

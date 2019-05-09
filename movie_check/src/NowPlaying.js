@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Slider from "react-slick";
 import './styles/moviescarousel.css'
 
 class NowPlaying extends Component   {
@@ -26,15 +27,23 @@ class NowPlaying extends Component   {
     }
     
     render()    {
-        const movies_list = this.state.movieTitles.map((title) => <li key={title} className="Playmovies">{title}</li>)
+        var settings = {
+            slidesToShow: 7,
+            slidesToScroll: 2,
+            speed: 800,
+            autoplay: false,
+            autoplaySpeed: 3000,
+            arrows: true,
+          }
+        const movies_list = this.state.movieTitles.map((title) => <div key={title} className="Playmovies"><h3>{title}</h3></div>)
         return (
             
             <div className="Playing-container">
                 <div className="PlayingCarousel">
                     {/*<button onClick={this.loopMovies}/>*/}
-                    <ul className="Playing-movies">
+                    <Slider {...settings}>
                         {movies_list}
-                    </ul>
+                    </Slider>
                 </div>
             </div>
         )

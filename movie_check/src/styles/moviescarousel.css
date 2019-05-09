@@ -1,9 +1,13 @@
 /* Upcoming Carousel Component Styling*/
+.Carousel-container {
+    text-align: center;
+}
+
 .UpCarousel   {
-    background-color: blue;
     margin-top: 10px;
     height: 300px;
-    width: 100%; 
+    width: 80%;
+    display: inline-block;
 }
 
 .upcoming-movies    {
@@ -19,11 +23,15 @@
 }
 
 /* Playing Carousel Component Styling*/
+.Playing-container   {
+    text-align: center;
+}
+
 .PlayingCarousel   {
-    background-color: orange;
     margin-top: 10px;
     height: 300px;
-    width: 100%; 
+    width: 80%;
+    display: inline-block;
 }
 
 .Playing-movies    {
