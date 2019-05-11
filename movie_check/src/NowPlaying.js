@@ -10,11 +10,11 @@ class NowPlaying extends Component   {
             moviesArr: [],
             movieTitles: []
         }
-        //this.loopMovies = this.loopMovies.bind(this)
     }
     componentDidMount()
     {
-        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=93047c7458e1748a6446cbe28f6b02f1&language=en-US&page=1")
+        let api = "93047c7458e1748a6446cbe28f6b02f1&language=en-US&page"
+        fetch("https://api.tmdb.org/3/movie/now_playing?api_key="+ api + "=1")
         .then(data => data.json())
         .then(response => {
             this.setState({
@@ -22,10 +22,15 @@ class NowPlaying extends Component   {
             arrLength: response.results.length,
             movieTitles: response.results.map((item) => item.original_title)
         })
-        console.log(this.state)
         })
     }
-    
+                            //image size    //poster link
+                            //    |         //    |
+                            //    |         //    |
+                            //   \ /        //   \ /
+    //http://image.tmdb.org/t/p/w125//or06FN3Dka5tukK1e9sl16pB3iy.jpg
+
+
     render()    {
         var settings = {
             slidesToShow: 7,
@@ -40,7 +45,6 @@ class NowPlaying extends Component   {
             
             <div className="Playing-container">
                 <div className="PlayingCarousel">
-                    {/*<button onClick={this.loopMovies}/>*/}
                     <Slider {...settings}>
                         {movies_list}
                     </Slider>

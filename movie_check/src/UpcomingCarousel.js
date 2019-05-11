@@ -1,5 +1,6 @@
 import React, { Component} from 'react'
 import Slider from "react-slick";
+import Test from './test'
 import './styles/moviescarousel.css'
 
 class UpcomingCarousel extends Component   {
@@ -13,7 +14,8 @@ class UpcomingCarousel extends Component   {
     }
     componentDidMount()
     {
-        fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=93047c7458e1748a6446cbe28f6b02f1&language=en-US&page=1")
+        let api = "93047c7458e1748a6446cbe28f6b02f1&language=en-US&page"
+        fetch("https://api.themoviedb.org/3/movie/upcoming?api_key="+ api + "=1")
         .then(data => data.json())
         .then(response => {
             this.setState({
@@ -21,12 +23,10 @@ class UpcomingCarousel extends Component   {
             arrLength: response.results.length,
             movieTitles: response.results.map((item) => item.original_title)
         })
-        console.log(this.state)
         })    
     }
     
     render()    {
-        console.log(this.state)
         var settings = {
             slidesToShow: 7,
             slidesToScroll: 2,
@@ -39,10 +39,12 @@ class UpcomingCarousel extends Component   {
         return (
             <div className="Carousel-container">
                 <div className="UpCarousel">
-                    {/*<button onClick={this.loopMovies}/>*/}
                     <Slider {...settings}>
                         {movies_list}
                     </Slider>
+                </div>
+                <div className="test">
+                    <Test array={this.state.movieTitles}/>
                 </div>
             </div>
         )

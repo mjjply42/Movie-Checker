@@ -1,6 +1,7 @@
 /* Upcoming Carousel Component Styling*/
 .Carousel-container {
     text-align: center;
+    background-color: blue;
 }
 
 .UpCarousel   {
@@ -8,10 +9,6 @@
     height: 300px;
     width: 80%;
     display: inline-block;
-}
-
-.upcoming-movies    {
-    list-style: none;
 }
 
 .Upmovies {
@@ -25,6 +22,7 @@
 /* Playing Carousel Component Styling*/
 .Playing-container   {
     text-align: center;
+    background-color: purple;
 }
 
 .PlayingCarousel   {
@@ -34,19 +32,10 @@
     display: inline-block;
 }
 
-.Playing-movies    {
-    list-style: none;
-}
-
 .Playmovies {
     background-color: pink;
     height: 95%;
     width: 20%;
     margin: 0px 0px 10px 10px;
     display: inline-block;
-}
-
-.color-div      {
-    height: 200px;
-    width: 150px;
 }
